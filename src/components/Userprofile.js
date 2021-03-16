@@ -26,7 +26,7 @@ const UserProfile = ({ id }) => {
     return (
 
         <body class="body">
-            {result.map(user => (
+            {result.map(item => (
                 <>
 
                     <div align="center" style={{ background: "#242526", paddingTop: "50px", paddingBottom: "50px", marginBottom: "5px" }}>
@@ -35,36 +35,38 @@ const UserProfile = ({ id }) => {
                             <table style={{ width: "1000px" }}>
                                 <tr>
                                     <th align="center">
-                                        <div class="profile-image">
-                                            <img src={user.profile_image.large} alt="" />
+                                        <div className="outer circle">
+                                            <img className="image" src={item.profile_image.large} alt=" " />
+                                            <span></span>
+                                            <span></span>
                                         </div>
                                     </th>
                                     <th style={{ paddingLeft: "100px", paddingRight: "50px" }}>
                                         <div class="profile-stats" style={{ color: '#FFFFFF' }}>
-                                            <span class="profile-stat-count">{user.total_photos}</span><br />
+                                            <span class="profile-stat-count">{item.total_photos}</span><br />
                                             posts
                                         </div>
                                     </th>
                                     <th style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                                         <div class="profile-stats" style={{ color: '#FFFFFF' }}>
-                                            <span class="profile-stat-count">{user.total_likes}</span><br />
+                                            <span class="profile-stat-count">{item.total_likes}</span><br />
                                             followers
                                         </div>
                                     </th>
                                     <th style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                                         <div class="profile-stats" style={{ color: '#FFFFFF' }}>
-                                            <span class="profile-stat-count">{user.total_photos}</span><br />
+                                            <span class="profile-stat-count">{item.total_photos}</span><br />
                                             following
                                         </div>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td colspan="1" align="center">
-                                        <h4 class="profile-user-name" style={{ color: '#FFFFFF' }}>{user.username}</h4>
+                                        <h4 class="profile-user-name" style={{ color: '#FFFFFF' }}>{item.username}</h4>
                                     </td>
                                     <td colspan="3" style={{ paddingLeft: "100px" }}>
                                         <div class="profile-bio" style={{ color: "#FFFFFF" }}>
-                                            <span class="profile-real-name"><b>{user.first_name}{" "}{user.last_name}</b></span> {user.bio}
+                                            <span class="profile-real-name"><b>{item.first_name}{" "}{item.last_name}</b></span> {item.bio}
                                         </div>
                                     </td>
                                 </tr>

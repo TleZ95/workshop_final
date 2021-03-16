@@ -216,3 +216,69 @@ h1 span:nth-child(10){
 }
 /*------------------end --text-------------------------*/
 
+.outer {
+  position: relative;
+  margin: 0 50px;
+   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+
+}
+.image {
+  height: 200px;
+  width: 200px; 
+  border-radius: 50%;
+}
+
+.circle {
+  height: 200px;
+  width:200px;
+  border-radius: 50%;
+}
+
+.outer .image,.outer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.circle .image{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+
+}
+
+.outer .image {
+  background: #111;
+  color: #f2f2f2;
+  outline: none;
+  border: none;
+  z-index: 9;
+  letter-spacing: uppercase;
+
+}
+.outer span{
+  height: 100%;
+  width: 100%;
+  background: inherit;
+}
+.circle span {
+  border-radius: 50%;
+}
+
+.outer span:nth-child(1) {
+  filter: blur(7px);
+}
+.outer span:nth-child(2) {
+  filter: blur(14px);
+}
+.outer {
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
